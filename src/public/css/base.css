@@ -1,0 +1,32 @@
+:root{
+    --while-color:#fff;
+    --black-color:#000;
+    --text-color:#222;
+    --text-light-color:#878787;
+    --border-color:#dbdbdb;
+    --primary-color:#ee4d2d;
+    --primary-green-color:#0dd6b8;
+    --primary-light-color:#fbfcff;
+}
+*{
+    box-sizing: inherit;
+}
+html{
+    font-size:62.5%;
+    line-height:1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+
+}
+ul{
+    list-style: none;
+    margin:0px;
+    padding:0px;
+}
+a{
+    text-decoration:none;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration:none;
+}

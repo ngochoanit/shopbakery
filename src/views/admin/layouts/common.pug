@@ -1,0 +1,121 @@
+
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title HTBakery- #{title}
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com")
+    link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="/css/font/themify-icons/themify-icons.css")
+    link(rel="stylesheet", href="/css/base.css")
+    link(rel="stylesheet", href="/css/admin/base.css")
+    link(rel="stylesheet", href="/css/admin/style.css")
+<body>
+    div.app
+        header.container-fluid.header
+            div.row.header-wrap
+                div.col-4.col-xl-3.header__menu-wrap
+                    nav.header__menu
+                        div.header__menu-logo
+                            a(class="header__menu-logo-link",href="/admin")
+                                i.header__menu-logo-link-icon.ti-settings
+                                span.header__menu-logo-link-text ADMIN
+                        div.header__menu-content
+                            ul.header__menu-list
+                                li.header__menu-list-items
+                                    a(class="header__menu-list-items-link", href="#")
+                                        i.header__menu-list-items-link-icon.ti-id-badge
+                                        span.header__menu-list-items-link-text Hoàn
+                                        span.header__menu-list-items-link-ripple
+                                        span.header__menu-list-items-link-more 
+                                            i.header__menu-list-items-link-more-icon-right.ti-angle-right
+                                            i.header__menu-list-items-link-more-icon-down.ti-angle-down
+                                    ul.header__sub-menu-list
+                                        li.header__sub-menu-list-items
+                                            a(class="header__sub-menu-list-items-link header__sub-menu-list-items-link--active" , href="/admin/my/info")
+                                                i.header__sub-menu-list-items-link-icon.ti-info-alt
+                                                span.header__sub-menu-list-items-link-text Thông Tin Của Bạn
+                                        li.header__sub-menu-list-items
+                                            a(class="header__sub-menu-list-items-link" , href="/admin/my/info")
+                                                i.header__sub-menu-list-items-link-icon.ti-pencil-alt
+                                                span.header__sub-menu-list-items-link-text Chỉnh Sửa         
+                                li.header__menu-list-items        
+                                    a(class="header__menu-list-items-link", href="#")
+                                        i.header__menu-list-items-link-icon.ti-user
+                                        span.header__menu-list-items-link-text Tài Khoản
+                                        span.header__menu-list-items-link-ripple
+                                        span.header__menu-list-items-link-more 
+                                            i.header__menu-list-items-link-more-icon-right.ti-angle-right
+                                            i.header__menu-list-items-link-more-icon-down.ti-angle-down
+                                    ul.header__sub-menu-list
+                                        li.header__sub-menu-list-items
+                                            a(class="header__sub-menu-list-items-link header__sub-menu-list-items-link--active" , href="/admin/user/list")
+                                                i.header__sub-menu-list-items-link-icon.ti-view-list-alt
+                                                span.header__sub-menu-list-items-link-text Danh Sách Tài Khoản
+                                        li.header__sub-menu-list-items
+                                            a(class="header__sub-menu-list-items-link" , href="/admin/user/add")
+                                                i.header__sub-menu-list-items-link-icon.ti-plus
+                                                span.header__sub-menu-list-items-link-text Thêm Mới  
+                                        li.header__sub-menu-list-items
+                                            a(class="header__sub-menu-list-items-link" , href="/admin/user/trash")
+                                                i.header__sub-menu-list-items-link-icon.ti-trash
+                                                span.header__sub-menu-list-items-link-text Đã Xóa     
+                                li.header__menu-list-items        
+                                    a(class="header__menu-list-items-link", href="#")
+                                        i.header__menu-list-items-link-icon.ti-flag-alt-2
+                                        span.header__menu-list-items-link-text Chức Vụ
+                                        span.header__menu-list-items-link-ripple
+                                        span.header__menu-list-items-link-more 
+                                            i.header__menu-list-items-link-more-icon-right.ti-angle-right
+                                            i.header__menu-list-items-link-more-icon-down.ti-angle-down
+                                    ul.header__sub-menu-list
+                                        li.header__sub-menu-list-items
+                                            a(class="header__sub-menu-list-items-link header__sub-menu-list-items-link--active" , href="/admin/user/list")
+                                                i.header__sub-menu-list-items-link-icon.ti-view-list-alt
+                                                span.header__sub-menu-list-items-link-text Danh Sách Chức Vụ
+                                        li.header__sub-menu-list-items
+                                            a(class="header__sub-menu-list-items-link" , href="/admin/position/add")
+                                                i.header__sub-menu-list-items-link-icon.ti-plus
+                                                span.header__sub-menu-list-items-link-text Thêm Mới  
+                                        li.header__sub-menu-list-items
+                                            a(class="header__sub-menu-list-items-link" , href="/admin/position/trash")
+                                                i.header__sub-menu-list-items-link-icon.ti-trash
+                                                span.header__sub-menu-list-items-link-text Đã Xóa    
+                                li.header__menu-list-items    
+                                    a(class="header__menu-list-items-link", href="#")
+                                        i.header__menu-list-items-link-icon.ti-layers-alt
+                                        span.header__menu-list-items-link-text Slide
+                                        span.header__menu-list-items-link-ripple
+                                        span.header__menu-list-items-link-more 
+                                            i.header__menu-list-items-link-more-icon-right.ti-angle-right
+                                            i.header__menu-list-items-link-more-icon-down.ti-angle-down
+                                    ul.header__sub-menu-list
+                                        li.header__sub-menu-list-items
+                                            a(class="header__sub-menu-list-items-link header__sub-menu-list-items-link--active" , href="/admin/slide/list")
+                                                i.header__sub-menu-list-items-link-icon.ti-view-list-alt
+                                                span.header__sub-menu-list-items-link-text Danh Sách Slide
+                                        li.header__sub-menu-list-items
+                                            a(class="header__sub-menu-list-items-link" , href="/admin/slide/add")
+                                                i.header__sub-menu-list-items-link-icon.ti-plus
+                                                span.header__sub-menu-list-items-link-text Thêm Mới  
+                                        li.header__sub-menu-list-items
+                                            a(class="header__sub-menu-list-items-link" , href="/admin/slide/trash")
+                                                i.header__sub-menu-list-items-link-icon.ti-trash
+                                                span.header__sub-menu-list-items-link-text Đã Xóa    
+                div.col-8.col-xl-9.header__content
+                    div.row
+                        div.col-6.col-md-0
+                        div.col-6.col-md-12
+        block content
+        block footer
+        block modal
+    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
+    script(src='/js/admin/main.js')
+    script main()    
+
+    

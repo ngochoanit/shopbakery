@@ -1,0 +1,7 @@
+:root{
+    --header-height:90px;
+    --border-color: #ededf0;
+}
+@keyframes rippleDrop{
+    100% { transform: scale(2); opacity: 0; }
+}

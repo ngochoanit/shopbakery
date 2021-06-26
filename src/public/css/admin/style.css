@@ -1,0 +1,173 @@
+.header{
+    
+}
+.header-wrap{
+    height: var(--header-height);
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.header__menu-wrap{
+    padding-right: 0;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 0px rgb(44 101 144 / 10%);
+    z-index: 10;
+}
+.header__menu{
+    background-color: var(--while-color);
+    height: 100vh;
+    box-shadow: 0px 0px 20px 0px rgb(44 101 144 / 10%);
+    overflow: hidden;
+}
+.header__menu-logo{
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-bottom:1px solid var(--border-color);
+
+}
+.header__menu-logo-link{
+    display:block;
+    outline: none;
+}
+.header__menu-logo-link-icon{
+    font-size:3rem;
+    font-weight:800;
+    color:var(--primary-green-color);
+    margin-right: 10px;
+}
+.header__menu-logo-link-text{
+    font-size:3rem;
+    font-weight:600;
+    color:var(--primary-green-color);
+}
+
+.header__menu-content{
+    overflow-y: auto;
+    height: calc(100vh - var(--header-height));
+}
+.header__menu-content::-webkit-scrollbar{
+    width: 8px;
+    
+}
+.header__menu-content::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+.header__menu-content::-webkit-scrollbar-thumb{
+    width: 8px;
+    border-radius:4px;
+    background-color: rgba(222, 222, 222, .75);
+}
+.header__menu-list{
+    
+}
+.header__menu-list-items{
+    position:relative;
+    
+}
+.header__menu-list-items-link{
+    display: flex;
+    padding:15px 20px;
+    font-size:1.8rem;
+    text-emphasis: none;
+    align-items: center;
+    color: var(--text-light-color);
+    font-weight:400;
+    transition: .1s;
+    position:relative;
+    overflow: hidden;
+}
+.header__menu-list-items-link::before{
+    content:"";
+    position:absolute;
+    right:0;
+    height: 75%;
+    width: 3px;
+    background-color:var(--primary-green-color);
+    display:none;
+}
+.header__menu-list-items.header__menu-list-items--active .header__menu-list-items-link{
+    background-color: var(--primary-light-color);
+    color: var(--primary-green-color);
+}
+.header__menu-list-items.header__menu-list-items--active .header__menu-list-items-link:before{
+    display: block;
+}
+.header__menu-list-items-link:hover{
+    color: var(--primary-green-color);
+}
+.header__menu-list-items-link-icon{
+    font-size:2rem;
+    display: inline-block;
+    margin-right: 8px;
+}
+.header__menu-list-items-link-ripple{
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgb(30, 61, 115, 0.1);
+    transform: scale(0);
+    position: absolute;opacity: 1;
+}
+.rippleEffect{
+   
+    animation: rippleDrop .6s linear
+}
+.header__menu-list-items-link-more{
+    display: block;
+    line-height: 1.2rem;
+    font-size:1.2rem;
+    text-align:center;
+    margin-right:0px;
+    margin-left: auto;
+}
+.header__menu-list-items-link-more-icon-right,.header__menu-list-items-link-more-icon-down{
+    font-size:1.2rem;
+    font-weight: 800;
+}
+.header__menu-list-items-link-more-icon-down{
+    display:none;
+}
+.header__menu-list-items.header__menu-list-items--active .header__menu-list-items-link-more-icon-down{
+    display:block;
+}
+.header__menu-list-items.header__menu-list-items--active .header__menu-list-items-link-more-icon-right{
+    display:none;
+}
+
+.header__sub-menu-list{
+    display:none;
+}
+.header__menu-list-items.header__menu-list-items--active .header__sub-menu-list{
+    display:block
+}
+.header__sub-menu-list-items-link{
+    display: flex;
+    padding:15px 20px 15px 40px;
+    font-size:1.8rem;
+    text-emphasis: none;
+    align-items: center;
+    color: var(--text-light-color);
+    font-weight:400;
+    transition: .1s;
+    position:relative;
+}
+.header__sub-menu-list-items-link:hover{
+    color: var(--primary-green-color);
+}
+.header__sub-menu-list-items-link.header__sub-menu-list-items-link--active{
+    color: var(--primary-green-color);
+}
+.header__sub-menu-list-items-link-icon{
+    font-size:2rem;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+
+.header__content{
+    height: var(--header-height);
+    background-color:var(--primary-light-color)
+}
