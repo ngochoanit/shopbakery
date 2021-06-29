@@ -15,101 +15,138 @@ head
     link(rel="stylesheet", href="/css/admin/style.css")
 <body>
     div.app
-        header.container-fluid.header
-            div.row.header-wrap
-                div.col-4.col-xl-3.header__menu-wrap
-                    nav.header__menu
-                        div.header__menu-logo
-                            a(class="header__menu-logo-link",href="/admin")
-                                i.header__menu-logo-link-icon.ti-settings
-                                span.header__menu-logo-link-text ADMIN
-                        div.header__menu-content
-                            ul.header__menu-list
-                                li.header__menu-list-items
-                                    a(class="header__menu-list-items-link", href="#")
-                                        i.header__menu-list-items-link-icon.ti-id-badge
-                                        span.header__menu-list-items-link-text Hoàn
-                                        span.header__menu-list-items-link-ripple
-                                        span.header__menu-list-items-link-more 
-                                            i.header__menu-list-items-link-more-icon-right.ti-angle-right
-                                            i.header__menu-list-items-link-more-icon-down.ti-angle-down
-                                    ul.header__sub-menu-list
-                                        li.header__sub-menu-list-items
-                                            a(class="header__sub-menu-list-items-link header__sub-menu-list-items-link--active" , href="/admin/my/info")
-                                                i.header__sub-menu-list-items-link-icon.ti-info-alt
-                                                span.header__sub-menu-list-items-link-text Thông Tin Của Bạn
-                                        li.header__sub-menu-list-items
-                                            a(class="header__sub-menu-list-items-link" , href="/admin/my/info")
-                                                i.header__sub-menu-list-items-link-icon.ti-pencil-alt
-                                                span.header__sub-menu-list-items-link-text Chỉnh Sửa         
-                                li.header__menu-list-items        
-                                    a(class="header__menu-list-items-link", href="#")
-                                        i.header__menu-list-items-link-icon.ti-user
-                                        span.header__menu-list-items-link-text Tài Khoản
-                                        span.header__menu-list-items-link-ripple
-                                        span.header__menu-list-items-link-more 
-                                            i.header__menu-list-items-link-more-icon-right.ti-angle-right
-                                            i.header__menu-list-items-link-more-icon-down.ti-angle-down
-                                    ul.header__sub-menu-list
-                                        li.header__sub-menu-list-items
-                                            a(class="header__sub-menu-list-items-link header__sub-menu-list-items-link--active" , href="/admin/user/list")
-                                                i.header__sub-menu-list-items-link-icon.ti-view-list-alt
-                                                span.header__sub-menu-list-items-link-text Danh Sách Tài Khoản
-                                        li.header__sub-menu-list-items
-                                            a(class="header__sub-menu-list-items-link" , href="/admin/user/add")
-                                                i.header__sub-menu-list-items-link-icon.ti-plus
-                                                span.header__sub-menu-list-items-link-text Thêm Mới  
-                                        li.header__sub-menu-list-items
-                                            a(class="header__sub-menu-list-items-link" , href="/admin/user/trash")
-                                                i.header__sub-menu-list-items-link-icon.ti-trash
-                                                span.header__sub-menu-list-items-link-text Đã Xóa     
-                                li.header__menu-list-items        
-                                    a(class="header__menu-list-items-link", href="#")
-                                        i.header__menu-list-items-link-icon.ti-flag-alt-2
-                                        span.header__menu-list-items-link-text Chức Vụ
-                                        span.header__menu-list-items-link-ripple
-                                        span.header__menu-list-items-link-more 
-                                            i.header__menu-list-items-link-more-icon-right.ti-angle-right
-                                            i.header__menu-list-items-link-more-icon-down.ti-angle-down
-                                    ul.header__sub-menu-list
-                                        li.header__sub-menu-list-items
-                                            a(class="header__sub-menu-list-items-link header__sub-menu-list-items-link--active" , href="/admin/user/list")
-                                                i.header__sub-menu-list-items-link-icon.ti-view-list-alt
-                                                span.header__sub-menu-list-items-link-text Danh Sách Chức Vụ
-                                        li.header__sub-menu-list-items
-                                            a(class="header__sub-menu-list-items-link" , href="/admin/position/add")
-                                                i.header__sub-menu-list-items-link-icon.ti-plus
-                                                span.header__sub-menu-list-items-link-text Thêm Mới  
-                                        li.header__sub-menu-list-items
-                                            a(class="header__sub-menu-list-items-link" , href="/admin/position/trash")
-                                                i.header__sub-menu-list-items-link-icon.ti-trash
-                                                span.header__sub-menu-list-items-link-text Đã Xóa    
-                                li.header__menu-list-items    
-                                    a(class="header__menu-list-items-link", href="#")
-                                        i.header__menu-list-items-link-icon.ti-layers-alt
-                                        span.header__menu-list-items-link-text Slide
-                                        span.header__menu-list-items-link-ripple
-                                        span.header__menu-list-items-link-more 
-                                            i.header__menu-list-items-link-more-icon-right.ti-angle-right
-                                            i.header__menu-list-items-link-more-icon-down.ti-angle-down
-                                    ul.header__sub-menu-list
-                                        li.header__sub-menu-list-items
-                                            a(class="header__sub-menu-list-items-link header__sub-menu-list-items-link--active" , href="/admin/slide/list")
-                                                i.header__sub-menu-list-items-link-icon.ti-view-list-alt
-                                                span.header__sub-menu-list-items-link-text Danh Sách Slide
-                                        li.header__sub-menu-list-items
-                                            a(class="header__sub-menu-list-items-link" , href="/admin/slide/add")
-                                                i.header__sub-menu-list-items-link-icon.ti-plus
-                                                span.header__sub-menu-list-items-link-text Thêm Mới  
-                                        li.header__sub-menu-list-items
-                                            a(class="header__sub-menu-list-items-link" , href="/admin/slide/trash")
-                                                i.header__sub-menu-list-items-link-icon.ti-trash
-                                                span.header__sub-menu-list-items-link-text Đã Xóa    
-                div.col-8.col-xl-9.header__content
-                    div.row
-                        div.col-6.col-md-0
-                        div.col-6.col-md-12
-        block content
+        div.container-fluid
+            div.row
+                div.sidebar.col-md-3.col-lg-3.fixed-top.flex-column.d-flex
+                    div.row.sidebar-head
+                        div.col.sidebar-head-wrap
+                            a.sidebar-head-link.d-flex.h-100.align-items-center(href="/admin")
+                                i.sidebar-head-link-icon.ti-settings.d-block
+                                span.sidebar-head-link-text.d-block admin
+                    div.row.sidebar-content
+                        div.col.sidebar-content-wrap
+                            nav.sidebar-menu 
+                                ul.sidebar-menu-list.accordion(id='sidebar-menu-list')
+                                    li.sidebar-menu-list-items
+                                        a.sidebar-menu-list-items-link(data-toggle="collapse" href="#sidebar-menu-my-info")
+                                            i.sidebar-menu-list-items-link-icon.ti-id-badge
+                                            span.sidebar-menu-list-items-link-text Ngọc Hoàn
+                                            span.sidebar-menu-list-items-link-ripple
+                                            span.sidebar-menu-list-items-link-more 
+                                                i.sidebar-menu-list-items-link-more-icon-right.ti-angle-right
+                                                i.sidebar-menu-list-items-link-more-icon-down.ti-angle-down
+                                        ul.sidebar-sub-menu.collapse(id='sidebar-menu-my-info',data-parent="#sidebar-menu-list")   
+                                            li.sidebar-sub-menu-items
+                                                a.sidebar-sub-menu-items-link(href='/admin/my-info')
+                                                    i.sidebar-sub-menu-items-link-icon.ti-id-badge
+                                                    span.sidebar-sub-menu-items-link-text Thông Tin Tài Khoản
+                                            li.sidebar-sub-menu-items
+                                                a.sidebar-sub-menu-items-link(href='/admin/my-info/edit')
+                                                    i.sidebar-sub-menu-items-link-icon.ti-pencil-alt
+                                                    span.sidebar-sub-menu-items-link-text Chỉnh Sửa
+                                    li.sidebar-menu-list-items
+                                        a.sidebar-menu-list-items-link(data-toggle="collapse" href="#sidebar-menu-position")
+                                            i.sidebar-menu-list-items-link-icon.ti-flag-alt-2
+                                            span.sidebar-menu-list-items-link-text Phân Quyền
+                                            span.sidebar-menu-list-items-link-ripple
+                                            span.sidebar-menu-list-items-link-more 
+                                                i.sidebar-menu-list-items-link-more-icon-right.ti-angle-right
+                                                i.sidebar-menu-list-items-link-more-icon-down.ti-angle-down
+                                        ul.sidebar-sub-menu.collapse(id='sidebar-menu-position',data-parent="#sidebar-menu-list")   
+                                            li.sidebar-sub-menu-items
+                                                a.sidebar-sub-menu-items-link(href='/admin/position/list')
+                                                    i.sidebar-sub-menu-items-link-icon.ti-view-list-alt
+                                                    span.sidebar-sub-menu-items-link-text Danh Sách Quyền
+                                            li.sidebar-sub-menu-items
+                                                a.sidebar-sub-menu-items-link(href='/admin/position/edit')
+                                                    i.sidebar-sub-menu-items-link-icon.ti-plus
+                                                    span.sidebar-sub-menu-items-link-text Thêm Mới
+                                            li.sidebar-sub-menu-items
+                                                a.sidebar-sub-menu-items-link(href='/admin/position/trash')
+                                                    i.sidebar-sub-menu-items-link-icon.ti-trash
+                                                    span.sidebar-sub-menu-items-link-text Đá Xóa
+                                    li.sidebar-menu-list-items
+                                        a.sidebar-menu-list-items-link(data-toggle="collapse" href="#sidebar-menu-position4")
+                                            i.sidebar-menu-list-items-link-icon.ti-flag-alt-2
+                                            span.sidebar-menu-list-items-link-text Phân Quyền
+                                            span.sidebar-menu-list-items-link-ripple
+                                            span.sidebar-menu-list-items-link-more 
+                                                i.sidebar-menu-list-items-link-more-icon-right.ti-angle-right
+                                                i.sidebar-menu-list-items-link-more-icon-down.ti-angle-down
+                                        ul.sidebar-sub-menu.collapse(id='sidebar-menu-position4',data-parent="#sidebar-menu-list")   
+                                            li.sidebar-sub-menu-items
+                                                a.sidebar-sub-menu-items-link(href='/admin/position/list')
+                                                    i.sidebar-sub-menu-items-link-icon.ti-view-list-alt
+                                                    span.sidebar-sub-menu-items-link-text Danh Sách Quyền
+                                            li.sidebar-sub-menu-items
+                                                a.sidebar-sub-menu-items-link(href='/admin/position/edit')
+                                                    i.sidebar-sub-menu-items-link-icon.ti-plus
+                                                    span.sidebar-sub-menu-items-link-text Thêm Mới
+                                            li.sidebar-sub-menu-items
+                                                a.sidebar-sub-menu-items-link(href='/admin/position/trash')
+                                                    i.sidebar-sub-menu-items-link-icon.ti-trash
+                                                    span.sidebar-sub-menu-items-link-text Đá Xóa
+                                    li.sidebar-menu-list-items
+                                        a.sidebar-menu-list-items-link(data-toggle="collapse" href="#sidebar-menu-position3")
+                                            i.sidebar-menu-list-items-link-icon.ti-flag-alt-2
+                                            span.sidebar-menu-list-items-link-text Phân Quyền
+                                            span.sidebar-menu-list-items-link-ripple
+                                            span.sidebar-menu-list-items-link-more 
+                                                i.sidebar-menu-list-items-link-more-icon-right.ti-angle-right
+                                                i.sidebar-menu-list-items-link-more-icon-down.ti-angle-down
+                                        ul.sidebar-sub-menu.collapse(id='sidebar-menu-position3',data-parent="#sidebar-menu-list")   
+                                            li.sidebar-sub-menu-items
+                                                a.sidebar-sub-menu-items-link(href='/admin/position/list')
+                                                    i.sidebar-sub-menu-items-link-icon.ti-view-list-alt
+                                                    span.sidebar-sub-menu-items-link-text Danh Sách Quyền
+                                            li.sidebar-sub-menu-items
+                                                a.sidebar-sub-menu-items-link(href='/admin/position/edit')
+                                                    i.sidebar-sub-menu-items-link-icon.ti-plus
+                                                    span.sidebar-sub-menu-items-link-text Thêm Mới
+                                            li.sidebar-sub-menu-items
+                                                a.sidebar-sub-menu-items-link(href='/admin/position/trash')
+                                                    i.sidebar-sub-menu-items-link-icon.ti-trash
+                                                    span.sidebar-sub-menu-items-link-text Đá Xóa
+                div.content.col-md-9.col-lg-9.offset-md-3
+                    header.row.header.align-items-center
+                        div.d-md-none.col-lg-4.d-lg-flex.flex-column
+                            h3.header-breadcrumb-title.mb-0 Ngọc Hoàn
+                            nav.header-breadcrumb(aria-label='breadcrumb')
+                                ol.breadcrumb.mb-0
+                                    li.breadcrumb-item
+                                        a(href='/admin') Admin
+                                    li.breadcrumb-item
+                                        a(href='#') My Info
+                        div.col-lg-4.col-md-8
+                            form.header-form-search
+                                div.form-group
+                                    input.form-control.header-form-search-input(type='text', placeholder='Tìm Kiếm')
+                                button.header-form-search-btn.btn(type='submit') 
+                                    i.ti-search
+                        div.col-lg-4.col-md-4
+                            a.header-account.d-inline-flex.justify-content-end.float-right(data-toggle="collapse"  href="#header-account-nav")
+                                img.header-account-img.mr-3(src="/images/avatar/ngochoan.jpg")
+                                div.header-account-content
+                                    div.header-account-content-name Ngọc Hoàn
+                                    div.header-account-content-position Admin
+                            div.collapse.header-account-nav.w-80(id="header-account-nav")
+                                div.card.collapse.header-account-nav-wrap
+                                    div.card-body.header-account-nav-body.d-flex.flex-column.w-100
+                                        div.card-header.header-account-nav-body-head
+                                            h3.card-title.header-account-nav-body-head-title Xin Chào Ngọc Hoàn
+                                            span.cart-text.header-account-nav-body-head-position Admin
+                                        div.btn-group-vertical.header-account-nav-body-content
+                                            a.btn.header-account-nav-body-content-link.d-flex.align-items-center(href='/admin/my-info')
+                                                i.header-account-nav-body-content-link-icon.mr-3.ti-id-badge
+                                                div.header-account-nav-body-content-link-content.d-flex.flex-column
+                                                    span.header-account-nav-body-content-link-content-text Thông Tin Tài Khoản
+                                                    span.header-account-nav-body-content-link-content-description Thông tin các nhân và tài khoản của bạn
+                                            a.btn.header-account-nav-body-content-link.d-flex.align-items-center(href='/admin/my-info')
+                                                i.header-account-nav-body-content-link-icon.mr-3.ti-id-badge
+                                                div.header-account-nav-body-content-link-content.d-flex.flex-column
+                                                    span.header-account-nav-body-content-link-content-text Thông Tin Tài Khoản
+                                                    span.header-account-nav-body-content-link-content-description Thông tin các nhân và tài khoản của bạn
+                    block content
         block footer
         block modal
     script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js")

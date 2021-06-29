@@ -1,19 +1,21 @@
-function hendlHeaderMenu(headerMenuName){
-    this.headerMenuName=document.querySelector(headerMenuName);
+function hendlHeaderMenu(sidebarName){
+    this.sidebar=$(sidebarName);
     let menuItemActive;
     this._this=this;
     this.menuItemsDisplay=(listMenuItems)=>{
         return()=>{
             if(listMenuItems.length>0){
                 let rippleEle;
-                listMenuItems.forEach((menuItem)=>{
-                    menuItem.onclick=(event)=>{
-                        rippleEle=menuItem.querySelector('.header__menu-list-items-link-ripple')
-                        rippleEle.remove();
-                        let posX = menuItem.offsetLeft
-                        let posY = menuItem.offsetTop
-                        let buttonWidth = menuItem.offsetWidth;
-                        let buttonHeight = menuItem.offsetHeight;
+                ;
+                listMenuItems.each((index)=>{
+                    let menuItem=$(listMenuItems[index]);
+                    
+                    $(menuItem).click((event)=>{
+                        $(rippleEle).remove();
+                        let posX = $(menuItem).offset().left,
+                        posY = $(menuItem).offset().top,
+                        buttonWidth = $(menuItem).width(),
+                        buttonHeight = $(menuItem).height();
                         if(buttonWidth> buttonHeight){
                             buttonHeight = buttonWidth;
                         }
@@ -22,30 +24,40 @@ function hendlHeaderMenu(headerMenuName){
                         }
                         let x = event.pageX - posX - buttonWidth / 2;
                         let y = event.pageY - posY - buttonHeight / 2;
-                        let span=document.createElement("span")
-                        span.classList.add('header__menu-list-items-link-ripple','rippleEffect')
-                        span.style.height= buttonHeight;
-                        span.style.width= buttonWidth;
-                        span.style.top= y;
-                        span.style.left= x;
-                        menuItem.querySelector('.header__menu-list-items-link').appendChild(span);
-                        
-                        menuItem.classList.toggle('header__menu-list-items--active')
+                        $(menuItem).find('.sidebar-menu-list-items-link').prepend("<span class='sidebar-menu-list-items-link-ripple'></span>")
+                        $(menuItem).find(".sidebar-menu-list-items-link-ripple").css({
+                            width: buttonWidth,
+                            height: buttonHeight,
+                            top: y + 'px',
+                            left: x + 'px'
+                        }).addClass("rippleEffect");
+                        $(menuItem).toggleClass('sidebar-menu-list-items--active')
                         if(this.menuItemActive && this.menuItemActive!==menuItem ){
-                            this.menuItemActive.classList.remove('header__menu-list-items--active')
+                            $(this.menuItemActive).removeClass('sidebar-menu-list-items--active')
                         }
-                        this.menuItemActive=menuItem
-                    }
+                        this.menuItemActive=$(menuItem)
+                    })
                 })
             }
         }
     }
     this.run=()=>{
-        this.menuItemsDisplay(this.headerMenuName.querySelectorAll('.header__menu-list-items'))();
+        this.menuItemsDisplay($(this.sidebar).find('.sidebar-menu-list-items'))();
+    }
+}
+function hendlCollapse(){
+    this.run=()=>{
+        $(document).click(function(e) {
+            if (!$(e.target).is('.panel-body')) {
+                $('.collapse').collapse('hide');	    
+            }
+        });
     }
 }
 function main(){
-    const headerMenu= new hendlHeaderMenu('.header__menu');
+    const headerMenu= new hendlHeaderMenu('.sidebar');
+    const collapse = new  hendlCollapse();
     headerMenu.run();
-
+    collapse.run()
+   
 }
