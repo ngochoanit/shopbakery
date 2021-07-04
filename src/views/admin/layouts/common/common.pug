@@ -9,7 +9,8 @@ head
     link(rel="preconnect", href="https://fonts.googleapis.com")
     link(rel="preconnect", href="https://fonts.gstatic.com")
     link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap", rel="stylesheet")
-    link(rel="stylesheet", href="/css/font/themify-icons/themify-icons.css")
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css")
+    //- link(rel="stylesheet", href="/css/font/themify-icons/themify-icons.css")
     link(rel="stylesheet", href="/css/base.css")
     link(rel="stylesheet", href="/css/admin/base.css")
     link(rel="stylesheet", href="/css/admin/style.css")
@@ -21,7 +22,7 @@ head
                     div.row.sidebar-head
                         div.col.sidebar-head-wrap
                             a.sidebar-head-link.d-flex.h-100.align-items-center(href="/admin")
-                                i.sidebar-head-link-icon.ti-settings.d-block
+                                i.sidebar-head-link-icon.bi.bi-gear.d-block
                                 span.sidebar-head-link-text.d-block admin
                     div.row.sidebar-content
                         div.col.sidebar-content-wrap
@@ -29,25 +30,25 @@ head
                                 ul.sidebar-menu-list.accordion(id='sidebar-menu-list')
                                     li.sidebar-menu-list-items
                                         a.sidebar-menu-list-items-link(data-toggle="collapse" href="#sidebar-menu-my-info")
-                                            i.sidebar-menu-list-items-link-icon.ti-id-badge
+                                            i.sidebar-menu-list-items-link-icon.bi.bi-person-circle
                                             span.sidebar-menu-list-items-link-text Ngọc Hoàn
                                             span.sidebar-menu-list-items-link-ripple
                                             span.sidebar-menu-list-items-link-more 
-                                                i.sidebar-menu-list-items-link-more-icon-right.ti-angle-right
-                                                i.sidebar-menu-list-items-link-more-icon-down.ti-angle-down
+                                                i.sidebar-menu-list-items-link-more-icon-right.bi.bi-arrow-right-circle
+                                                i.sidebar-menu-list-items-link-more-icon-down.bi.bi-arrow-down-circle
                                         ul.sidebar-sub-menu.collapse(id='sidebar-menu-my-info',data-parent="#sidebar-menu-list")   
                                             li.sidebar-sub-menu-items
                                                 a.sidebar-sub-menu-items-link(href='/admin/my-info')
-                                                    i.sidebar-sub-menu-items-link-icon.ti-id-badge
+                                                    i.sidebar-sub-menu-items-link-icon.bi.bi-info-circle
                                                     span.sidebar-sub-menu-items-link-text Thông Tin Tài Khoản
                                             li.sidebar-sub-menu-items
                                                 a.sidebar-sub-menu-items-link(href='/admin/my-info/edit')
-                                                    i.sidebar-sub-menu-items-link-icon.ti-pencil-alt
+                                                    i.sidebar-sub-menu-items-link-icon.bi.bi-pencil-square
                                                     span.sidebar-sub-menu-items-link-text Chỉnh Sửa
                                     li.sidebar-menu-list-items
                                         a.sidebar-menu-list-items-link(data-toggle="collapse" href="#sidebar-menu-position")
-                                            i.sidebar-menu-list-items-link-icon.ti-flag-alt-2
-                                            span.sidebar-menu-list-items-link-text Phân Quyền
+                                            i.sidebar-menu-list-items-link-icon.bi.bi-person-badge
+                                            span.sidebar-menu-list-items-link-text Chức Vụ
                                             span.sidebar-menu-list-items-link-ripple
                                             span.sidebar-menu-list-items-link-more 
                                                 i.sidebar-menu-list-items-link-more-icon-right.ti-angle-right
@@ -55,15 +56,15 @@ head
                                         ul.sidebar-sub-menu.collapse(id='sidebar-menu-position',data-parent="#sidebar-menu-list")   
                                             li.sidebar-sub-menu-items
                                                 a.sidebar-sub-menu-items-link(href='/admin/position/list')
-                                                    i.sidebar-sub-menu-items-link-icon.ti-view-list-alt
-                                                    span.sidebar-sub-menu-items-link-text Danh Sách Quyền
+                                                    i.sidebar-sub-menu-items-link-icon.bi.bi-card-list
+                                                    span.sidebar-sub-menu-items-link-text Danh Chức Vụ
                                             li.sidebar-sub-menu-items
                                                 a.sidebar-sub-menu-items-link(href='/admin/position/edit')
-                                                    i.sidebar-sub-menu-items-link-icon.ti-plus
+                                                    i.sidebar-sub-menu-items-link-icon.bi.bi-plus-circle
                                                     span.sidebar-sub-menu-items-link-text Thêm Mới
                                             li.sidebar-sub-menu-items
                                                 a.sidebar-sub-menu-items-link(href='/admin/position/trash')
-                                                    i.sidebar-sub-menu-items-link-icon.ti-trash
+                                                    i.sidebar-sub-menu-items-link-icon.bi.bi-trash
                                                     span.sidebar-sub-menu-items-link-text Đá Xóa
                                     li.sidebar-menu-list-items
                                         a.sidebar-menu-list-items-link(data-toggle="collapse" href="#sidebar-menu-position4")
@@ -122,7 +123,7 @@ head
                                 div.form-group
                                     input.form-control.header-form-search-input(type='text', placeholder='Tìm Kiếm')
                                 button.header-form-search-btn.btn(type='submit') 
-                                    i.ti-search
+                                    i.bi.bi-search
                         div.col-lg-4.col-md-4
                             a.header-account.d-inline-flex.justify-content-end.float-right(data-toggle="collapse"  href="#header-account-nav")
                                 img.header-account-img.mr-3(src="/images/avatar/ngochoan.jpg")
@@ -147,8 +148,6 @@ head
                                                     span.header-account-nav-body-content-link-content-text Thông Tin Tài Khoản
                                                     span.header-account-nav-body-content-link-content-description Thông tin các nhân và tài khoản của bạn
                     block content
-        block footer
-        block modal
     script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")

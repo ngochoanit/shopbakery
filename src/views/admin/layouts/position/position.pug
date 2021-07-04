@@ -1,0 +1,52 @@
+extends ../common/common.pug
+block content
+    section.content-page.row
+        div.col-md-12
+            .card.content-card
+                .card-header.content-card-header
+                    h4 Danh Sách
+                .card-body.content-card-body
+                    .content-card-body-content
+                        .row.justify-content-between
+                            .col-md-6 
+                                form.form-inline.mb-0.content-card-body-content-form
+                                    input.form-control.content-card-body-content-form-input.w-75(type='text', placeholder='Tìm Kiếm')
+                                    button.btn.content-card-body-content-form-btn(type='submit') 
+                                        i.bi.bi-search
+                            .col-md-6.t
+                                a.btn.content-card-body-content-btn.float-right.btn-primary(href="#")
+                                    i.bi.bi-plus-circle 
+                                    |Thêm Mới
+                        table.table.table-bordered
+                            thead
+                                tr
+                                    th(scope='col') #
+                                    th(scope='col') Tên
+                                    th(scope='col') Mô Tả
+                                    th(scope='col') Thời Gian
+                                    th(scope='col') Hành Động
+                            tbody
+                                each position,index in  positions
+                                    tr
+                                        th(scope='row')=index
+                                        td= position.name
+                                        td= position.description
+                                        td= moment(position.updatedAt).format('L LTS')
+                                        td
+                                            a.btn.btn-transparent(href="", data-toggle='tooltip', data-placement='top', title='Chỉnh Sửa')
+                                                i.bi.bi-pencil-square
+                                            a.btn.btn-transparent(href="", data-toggle='tooltip', data-placement='top', title='Xóa')
+                                                i.bi.bi-trash
+                                
+                    nav.float-right.content-card-body-pagination
+                        ul.pagination
+                            li.page-item
+                                a.page-link(href='#') Previous
+                            li.page-item
+                                a.page-link(href='#') 1
+                            li.page-item
+                                a.page-link(href='#') 2
+                            li.page-item
+                                a.page-link(href='#') 3
+                            li.page-item
+                                a.page-link(href='#') Next            

@@ -31,11 +31,15 @@ function hendlHeaderMenu(sidebarName){
                             top: y + 'px',
                             left: x + 'px'
                         }).addClass("rippleEffect");
-                        $(menuItem).toggleClass('sidebar-menu-list-items--active')
-                        if(this.menuItemActive && this.menuItemActive!==menuItem ){
-                            $(this.menuItemActive).removeClass('sidebar-menu-list-items--active')
+                        $(menuItem).toggleClass('sidebar-menu-list-items--active') 
+                        $(this.menuItemActive).toggleClass('sidebar-menu-list-items--active')
+                        if( this.menuItemActive && JSON.stringify(this.menuItemActive) === JSON.stringify($(menuItem))){
+                            $(this.menuItemActive).removeClass('sidebar-menu-list-items--active');
+                            this.menuItemActive=null
                         }
-                        this.menuItemActive=$(menuItem)
+                        else{
+                            this.menuItemActive=$(menuItem);
+                        }
                     })
                 })
             }
