@@ -1,0 +1,47 @@
+$theme-colors: (
+  "primary": #0dd6b8,
+  "danger": #ff4136,
+  "while-color":#fff,
+  "black-color":#000,
+  "red-color":#dc3545,
+  "text-color":#222,
+  "text-light-color":#878787,
+  "border-color":#dbdbdb,
+  "primary-color":#ee4d2d,
+  "primary-green-color":#0dd6b8,
+  "primary-light-color":#fbfcff,
+);
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+@import "../../../node_modules/bootstrap/scss/utilities";
+@import "../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../../../node_modules/bootstrap/scss/bootstrap-reboot.scss";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+*{
+    box-sizing: inherit;
+}
+html{
+    font-size:62.5%;
+    line-height:1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    color:var(--text-color);
+}
+ul{
+    list-style: none;
+    margin:0px;
+    padding:0px;
+}
+a{
+    text-decoration:none;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration:none;
+}

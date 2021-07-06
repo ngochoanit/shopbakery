@@ -5,13 +5,13 @@ function hendlHeaderMenu(sidebarName){
     this.menuItemsDisplay=(listMenuItems)=>{
         return()=>{
             if(listMenuItems.length>0){
-                let rippleEle;
-                ;
+               
                 listMenuItems.each((index)=>{
                     let menuItem=$(listMenuItems[index]);
-                    
+                    // let rippleEle=$(menuItem).find(".sidebar-menu-list-items-link-ripple")
                     $(menuItem).click((event)=>{
-                        $(rippleEle).remove();
+                        $(menuItem).find(".sidebar-menu-list-items-link-ripple").remove();
+                       
                         let posX = $(menuItem).offset().left,
                         posY = $(menuItem).offset().top,
                         buttonWidth = $(menuItem).width(),

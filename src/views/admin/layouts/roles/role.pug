@@ -11,10 +11,10 @@ block content
                             .col-md-6 
                                 form.form-inline.mb-0.content-card-body-content-form
                                     input.form-control.content-card-body-content-form-input.w-75(type='text', placeholder='Tìm Kiếm')
-                                    button.btn.content-card-body-content-form-btn(type='submit') 
+                                    button.btn.btn-primary.btn-lg.content-card-body-content-form-btn.position-absolute(type='submit') 
                                         i.bi.bi-search
                             .col-md-6.t
-                                a.btn.content-card-body-content-btn.float-right.btn-primary(href="#")
+                                a.btn.btn-md.float-right.btn-primary.btn-lg(href="#")
                                     i.bi.bi-plus-circle 
                                     |Thêm Mới
                         table.table.table-bordered
@@ -23,20 +23,26 @@ block content
                                     th(scope='col') #
                                     th(scope='col') Tên
                                     th(scope='col') Mô Tả
-                                    th(scope='col') Thời Gian
+                                    th(scope='col') Trạng Thái
                                     th(scope='col') Hành Động
                             tbody
-                                each position,index in  positions
+                                each role,index in  roles
                                     tr
-                                        th(scope='row')=index
-                                        td= position.name
-                                        td= position.description
-                                        td= moment(position.updatedAt).format('L LTS')
-                                        td
-                                            a.btn.btn-transparent(href="", data-toggle='tooltip', data-placement='top', title='Chỉnh Sửa')
+                                        td=index
+                                        td= role.name
+                                        td= role.description
+                                        td=role.starus
+                                            if role.status
+                                                span.badge.badge-primary.badge-lg Hoạt Động 
+                                            else     
+                                               span.badge.badge-danger Khóa
+                                        td.d-flex.justify-content-around
+                                            a.btn.btn-primary.btn-lg.mr-2(href="", data-toggle='tooltip', data-placement='top', title='Chỉnh Sửa')
                                                 i.bi.bi-pencil-square
-                                            a.btn.btn-transparent(href="", data-toggle='tooltip', data-placement='top', title='Xóa')
+                                            a.btn.btn-danger.btn-lg.mr-2(href="", data-toggle='tooltip', data-placement='top', title='Xóa')
                                                 i.bi.bi-trash
+                                            a.btn.btn-info.btn-lg.mr-2(href="", data-toggle='tooltip', data-placement='top', title='Chi Tiết')
+                                                i.bi.bi-eye
                                 
                     nav.float-right.content-card-body-pagination
                         ul.pagination
